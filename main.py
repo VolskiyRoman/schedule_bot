@@ -29,7 +29,7 @@ class Bot:
         self.schedule = schedule
 
     def create_menu_markup(self):
-        markup = types.InlineKeyboardMarkup()
+        markup = types.InlineKeyboardMarkup(row_width=1)
         website_button = types.InlineKeyboardButton('Перейти на сайт', callback_data='website')
         schedule_button = types.InlineKeyboardButton('Мій розклад', callback_data='schedule')
         change_week = types.InlineKeyboardButton('Змінити тиждень', callback_data='change_schedule')
