@@ -1,7 +1,7 @@
 import telebot
 import webbrowser
 from telebot import types
-
+from config import TELEGRAM_API_TOKEN
 
 class Schedule:
     def __init__(self, first_week, second_week):
@@ -21,7 +21,6 @@ class Schedule:
                 schedule_text += f"{order}: {subject}\n"
             schedule_text += '\n'
         return schedule_text
-
 
 class Bot:
     def __init__(self, token, schedule):
@@ -102,7 +101,6 @@ class Bot:
         text = "Ось ваше головне меню:"
         self.bot.send_message(message.chat.id, text, reply_markup=markup)
 
-
 if __name__ == "__main__":
     my_schedule_first_week = {
         'Понеділок': {},
@@ -136,15 +134,12 @@ if __name__ == "__main__":
     }
 
     lesson_links = {
-        "Урок 1": "https://example.com/lesson1",
-        "Урок 2": "https://example.com/lesson2",
-        "Урок 3": "https://example.com/lesson3",
-        "Урок 4": "https://example.com/lesson4",
-        "Урок 5": "https://example.com/lesson5"
+        "Пара 1": "посилання1",
+        "Пара 2": "посилання2",
+        "Пара 3": "посилання3",
+        # Додайте інші пари та посилання за потреби
     }
 
     schedule = Schedule(my_schedule_first_week, my_schedule_second_week)
-    bot = Bot('6345985846:AAG1uhFPwX9vDkqqrP3Xab4sEOj95qxfP2w', schedule)
+    bot = Bot(TELEGRAM_API_TOKEN, schedule)
     bot.global_init()
-
-

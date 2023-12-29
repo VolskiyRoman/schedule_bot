@@ -6,15 +6,11 @@ Schedule Bot is a Telegram bot built using the Telebot library. It serves as a h
 
 - **Class Schedule:** Users can conveniently view and manage their class schedules through the bot. The bot provides an intuitive interface for accessing information about classes and timings.
 
-- **Notification Settings:** Users have the ability to configure notification settings to receive reminders about upcoming classes. This feature ensures that users stay informed and prepared for their classes.
-
 - **Teacher Information:** The bot also offers information about teachers, making it easy for users to find contact details and communicate with their instructors.
 
 ## How to Use
 
 1. **View Class Schedule:** Simply send a command to the bot to view your class schedule. The bot will respond with your upcoming classes and their timings.
-
-2. **Configure Notifications:** Use the notification settings feature to set up reminders for your classes. This way, you'll never miss an important class again.
 
 3. **Access Teacher Information:** Inquire about teachers by sending a request to the bot. It will provide you with contact details and other relevant information.
 
